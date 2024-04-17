@@ -361,7 +361,7 @@ values it replaces, <span class="math inline">\(t_k + t_{k +
 <p>We can recreate the two ordering process examples shown on pages 187
 (section 3) and 189 (section 5) of Chacko (1966) in this package.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(permChacko)</span></code></pre></div>
-<pre><code>## This is permChacko 0.2.0
+<pre><code>## This is permChacko 1.0.0
 ## To learn more about the package, please read the documentation available in the commands below:
 ## help(&quot;permChacko-package&quot;)
 ## browseVignettes(&quot;permChacko&quot;)</code></pre>
@@ -426,19 +426,21 @@ are calculated using the <code>permChacko()</code> function.</p>
 ## Test statistic (chisq_bar): 2.285714
 ## p-values:
 ##   Analytic p-value        : 0.318907
-##   Numeric p-value         : 0.176000 (1000 permutations)
+##   Numeric p-value         : 0.166000 (1000 permutations)
+##   Numeric mid-p value     : 0.164000 (1000 permutations)
 ##   Tabular p-value         : 0.196052</code></pre>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">permChacko</span>(chacko66_sec5)</span></code></pre></div>
 <pre><code>## 
 ##         Chacko Test for Order-restriction with Permutation Test
 ## 
-## Null hypothesis           : p1 == p2 == p3 == p4 == p5 == p6 == p7 == p8 == p9 == p10
-## Alternative hypothesis    : p1 &lt;= p2 &lt;= p3 &lt;= p4 &lt;= p5 &lt;= p6 &lt;= p7 &lt;= p8 &lt;= p9 &lt;= p10
+## Null hypothesis           : p1 == p2 == ... == p9 == p10
+## Alternative hypothesis    : p1 &lt;= p2 &lt;= ... &lt;= p9 &lt;= p10
 ## 
 ## Test statistic (chisq_bar): 13.500000
 ## p-values:
 ##   Analytic p-value        : 0.035748
 ##   Numeric p-value         : 0.001000 (1000 permutations)
+##   Numeric mid-p value     : 0.001000 (1000 permutations)
 ##   Tabular p-value         : 0.002294</code></pre>
 <p>One omission from Chacko (1966) is the event where <span class="math inline">\(m = 1\)</span>. As discussed above, they clearly
 expect that this will happen sometimes, but provide no explanation as to
